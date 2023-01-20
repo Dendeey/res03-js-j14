@@ -1,5 +1,7 @@
 import { User } from "./classes/user.js";
 import { Book } from "./classes/book.js";
+import { UserManager } from "./classes/usermanager.js";
+import { BookManager } from "./classes/bookmanager.js";
  
   
 window.addEventListener("DOMContentLoaded", function(){  
@@ -23,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function(){
     
     //Du JS au JSON, stocker dans le sessionStorage 
     sessionStorage.setItem("books", JSON.stringify(bookArray));
-    sessionStorage.setItem("user", JSON.stringify(userArray));*/
+    sessionStorage.setItem("user", JSON.stringify(userArray));
     
     //Du JSON au JS
     let recupBook = JSON.parse(sessionStorage.getItem("books"));
@@ -54,7 +56,9 @@ window.addEventListener("DOMContentLoaded", function(){
     {
         let user = new User(recupUserTab[i].id, recupUserTab[i].username, recupUserTab[i].email, recupUserTab[i].password, recupUserTab[i].firstname, recupUserTab[i].lastname, recupUserTab[i].profileImage);
         console.log(user);
-    }
+    }*/
     
+    let A = new BookManager();
+    console.log(A.save());
     
 });

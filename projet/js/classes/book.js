@@ -98,6 +98,24 @@ class Book{
         
     }
     
+    toJSON () {
+
+    let book = {
+        
+        id : this.#id,
+        title : this.#title,
+        author : this.#author,
+        publicationDate : this.#publicationDate,
+        totalPages : this.#totalPages,
+        excerpt : this.#excerpt,
+        coverImage : this.#coverImage,
+
+    };
+
+    return JSON.stringify(book);
+
+    }
+    
 }
 
 export { Book };

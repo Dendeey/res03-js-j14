@@ -98,6 +98,24 @@ class User{
         
     }
     
+    toJSON () {
+
+    let user = {
+        
+        id : this.#id,
+        username : this.#username,
+        email : this.#email,
+        password : this.#password,
+        firstName : this.#firstName,
+        lastName : this.#lastName,
+        profileImage : this.#profileImage,
+        
+    };
+
+        return JSON.stringify(user);
+
+   }
+    
 }
 
 export { User };

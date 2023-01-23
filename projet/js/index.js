@@ -58,7 +58,5 @@ window.addEventListener("DOMContentLoaded", function(){
         console.log(user);
     }*/
     
-    let A = new BookManager();
-    console.log(A.save());
     
 });
